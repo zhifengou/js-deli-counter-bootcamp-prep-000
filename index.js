@@ -1,9 +1,11 @@
 //new array
 var DeliLine=[]
 //takes an array add new person 
-function takeANumber(DeliLine,newPerson){
-  DeliLine.push(newPerson)
-  return `Welcome, ${newPerson}. You are number ${DeliLine.length} in line.`
+var num=0;
+function takeANumber(DeliLine,num){
+  DeliLine.push(num)
+  num++;
+  return `Welcome, ${num}. You are number ${DeliLine.length} in line.`
 }
 //remove first person in array
 function nowServing(DeliLine){
@@ -16,9 +18,8 @@ function nowServing(DeliLine){
 //creat a new array to store order string
 function currentLine(DeliLine){
    var arr=[]
-  DeliLine.forEach(function(item,index){
-    arr.push(` `+(index+1)+`. `+item)
-  })
+ DeliLine.forEach(function(item,index){
+   arr.push(` `+(index+1)+`. `+item)})
 // var i=0
 // while(i<DeliLine.length){
 //   arr.push(` `+(i+1)+`. `+DeliLine[i])
